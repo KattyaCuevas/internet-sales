@@ -38,7 +38,11 @@ header, footer {
   background-color: #e67e22;
   color: white;
   padding: 20px 0;
-  text-align: center;
+}
+header h1 { margin: 10px 20px; }
+header p {
+  float: right;
+  margin-right: 20px;
 }
 nav {
   box-sizing: border-box;
@@ -121,7 +125,7 @@ button:hover {
   .productos { margin-left: 0; }
 }
 
-#notice{
+#notice {
   color: #008000;
   float: right;
   background: #fff;
@@ -130,7 +134,16 @@ button:hover {
   margin: 5px 29px 0 20px;
 }
 
-.total{
+#alert {
+  color: #008000;
+  float: right;
+  background: #fff;
+  border: 1px solid red;
+  padding: 6px;
+  margin: 5px 29px 0 20px;
+}
+
+.total {
   color:green;
   display: inline-block;
   margin-bottom: 15px;
