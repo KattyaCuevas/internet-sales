@@ -1,76 +1,77 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 * { margin: 0; }
-html { background-color: #ecf0f1; }
+html { background-color: #F5F5F5; }
 body {
-  background-color: #34495e;
+  background-color: #F5F5F5;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0 auto;
-  max-width: 1080px;
+  max-width: em(1024);
 }
-.logo, h1 {
-  display: inline-block;
-  vertical-align: middle;
-}
+
+a:hover { color: #ecf0f1; }
+
 .logo {
-  width: 70px; 
+  display: inline-block;
+  float: left;
+  left: 8%;
+  line-height: 100px;
+  position: absolute;
+  top: 13px;
+  vertical-align: top;
+  vertical-align: top;
+  width: 150px;
 }
+
+header {
+  background-color: #8e44ad;
+  border-bottom: 1px solid darken(white, 10);
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+nav {
+  display: inline-block;
+  position: absolute;
+  right: 8%;
+  vertical-align: top;
+}
+
+ul { margin: 0; }
+
+li, i {
+  display: inline-block !important;
+  line-height: 100px;
+  color: white !important;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  margin: 10px;
+}
+
 h1 {
   font-size: 2em;
   font-weight: normal;
 }
+
 header, footer {
-  background-color: #e67e22;
   color: white;
-  padding: 20px 0;
 }
-header h1 { margin: 10px 20px; }
-header p {
-  float: right;
-  margin-right: 20px;
-}
-nav {
-  box-sizing: border-box;
-  float: left;
-  padding: 1em 2em;
-  width: 20%;
-  max-width: 150px;
-}
-nav ul { padding: 0; }
-nav ul a {
-  color: white !important;
-  font-size: 1.2em;
-  list-style: none;
-  text-decoration: none;
-}
-nav ul a:hover {
-  text-decoration: underline;
-}
-nav ul li { margin-bottom: .5em; }
+
 section {
   background-color: white;
-  margin-left: 20%;
   padding: 1em 2em;
+  margin-right: 8%;
+  margin-left: 8%;
 }
 .producto {
   border-top: 5px dotted #999;
   overflow: hidden;
-  padding: 1em 0 2em;
+  padding: 2em 3em 2em;
 }
 .producto img {
   float: left;

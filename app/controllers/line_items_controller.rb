@@ -33,7 +33,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: "Tu producto se ha agregado al carrito" }
+        format.html { redirect_to @line_item.cart, notice: "El producto ha sido agregado al carrito" }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
