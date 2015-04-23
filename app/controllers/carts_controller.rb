@@ -11,6 +11,14 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: @cart.id.to_s,
+               layout: 'layouts/application.pdf.erb',
+               show_as_html: params[:debug].present?
+      end
+    end
   end
 
   # GET /carts/new
