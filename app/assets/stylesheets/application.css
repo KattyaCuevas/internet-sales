@@ -8,79 +8,60 @@ body {
   max-width: em(1024);
 }
 
-.menu-nav {
-  margin-right: 8%;
-  margin-top: 15px;
-  font-size: 1.2em;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-}
 a:hover { color: #ecf0f1; }
 
-.logo, h1 {
-  display: inline-block;
-  vertical-align: middle;
-}
 .logo {
-  width: 70px;
+  display: inline-block;
+  float: left;
+  left: 8%;
+  line-height: 100px;
+  position: absolute;
+  top: 13px;
+  vertical-align: top;
+  vertical-align: top;
+  width: 150px;
 }
 
 header {
-    background-color: #8e44ad;
-    position: relative;
-    border-bottom: 1px solid darken(white, 10);
-    height: 60px;
-    width: 100%;
-    .logo {
-      float: left;
-      margin: 12px 0 0 1em;
-      width: 120px;
-    }
-
-    .navigation-menu-button {
-      float: right;
-      font-weight: 700;
-      line-height: $navigation-height;
-      margin: 0;
-      padding-right: 1em;
-      &:hover { color: #368EE0; }
-    }
+  background-color: #8e44ad;
+  border-bottom: 1px solid darken(white, 10);
+  height: 100px;
+  position: relative;
+  width: 100%;
 }
+
+nav {
+  display: inline-block;
+  position: absolute;
+  right: 8%;
+  vertical-align: top;
+}
+
+ul { margin: 0; }
+
+li, i {
+  display: inline-block !important;
+  line-height: 100px;
+  color: white !important;
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  margin: 10px;
+}
+
 h1 {
   font-size: 2em;
   font-weight: normal;
 }
+
 header, footer {
   color: white;
-  padding: 20px 0;
 }
-header h1 { margin: 10px 20px; }
-header p {
-  float: right;
-  margin-right: 20px;
-}
-nav {
-  box-sizing: border-box;
-  float: left;
-  padding: 1em 2em;
-  width: 20%;
-  max-width: 150px;
-}
-nav ul { padding: 0; }
-nav ul a {
-  color: white !important;
-  font-size: 1.2em;
-  list-style: none;
-  text-decoration: none;
-}
-nav ul a:hover {
-  text-decoration: underline;
-}
-nav ul li { margin-bottom: .5em; }
+
 section {
   background-color: white;
   padding: 1em 2em;
@@ -167,11 +148,4 @@ button:hover {
   color:green;
   display: inline-block;
   margin-bottom: 15px;
-}
-
-.logo {
-  bottom: 15px;
-  left: 8%;
-  position: absolute;
-  width: 150px;
 }

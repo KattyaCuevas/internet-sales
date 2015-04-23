@@ -9,16 +9,18 @@
 <body>
 <header>
   <a href="/"><img class= "logo" src="/logo.png"></a>
-  <p class= 'menu-nav'>
-  <% if user_signed_in? %>
-    Ha ingresado como <strong><%= current_user.email %></strong>.
-    <%= link_to 'Editar perfil', edit_user_registration_path %> |
-    <%= link_to "Salir", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Regístrarse", new_user_registration_path %> |
-    <%= link_to "Ingresar", new_user_session_path %>
-  <% end %>
-  </p>
+  <nav>
+    <ul>
+      <% if user_signed_in? %>
+        <li>Hola <strong><%= current_user.nombre%></strong>!</li>
+        <li><%= link_to 'Editar perfil', edit_user_registration_path %></li>
+        <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Regístrarse", new_user_registration_path %></li>
+        <li><%= link_to "Ingresar", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </nav>
 </header>
 <% if notice %>
   <p id="notice"><%= notice %></p>
