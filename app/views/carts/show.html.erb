@@ -1,7 +1,3 @@
-<% if notice %>
-  <p id="notice"><%= notice %></p>
-<% end %>
-
 <section class="productos">
   <h2>Mi carrito</h2>
   <% @cart.line_items.each do |item| %>
@@ -14,5 +10,5 @@
   <% end %>
   <h3 class="total">Total:</h3>
   <span><%= number_to_currency(@cart.total_price) %></span>
-  <%= button_to "Limpiar carrito", @cart, method: :delete, data: { confirm: "Estas seguro?" } %>
+  <%= button_to "Limpiar carrito", @cart, method: :delete, data: { confirm: "Esta seguro que desea limpiar el carrito?" } %>
 </section>
