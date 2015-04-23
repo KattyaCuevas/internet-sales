@@ -1,24 +1,24 @@
 <section class="productos">
 
-  <p>
+  <div class="field">
     <strong>Título:</strong>
     <%= @product.title %>
-  </p>
+  </div>
 
-  <p>
+  <div class="fiel">
     <strong>Descripción:</strong>
     <%= @product.description %>
-  </p>
+  </div>
 
-  <p>
+  <div class="field">
     <strong>Url de la imagen:</strong>
     <%= @product.image_url %>
-  </p>
+  </div>
 
-  <p>
+  <div class="field">
     <strong>Precio:</strong>
     <%= @product.price %>
-  </p>
+  </div>
 
   <%= link_to 'Editar', edit_product_path(@product) %> |
   <%= link_to 'Atrás', products_path %>
