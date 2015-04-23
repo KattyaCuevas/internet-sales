@@ -1,6 +1,12 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
+  def expired_time
+    time = DateTime.now.to_time - updated_at.to_time
+    time /= 60**2
+    destroy! if time >= 24
+  end
+
   def total_price
     line_items.to_a.sum { |item| item.total_price }
   end
@@ -14,5 +20,4 @@ class Cart < ActiveRecord::Base
     end
     current_item
   end
-
 end
