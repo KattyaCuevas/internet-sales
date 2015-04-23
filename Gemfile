@@ -6,6 +6,7 @@ gem 'rails', '4.2.0'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'devise'
+gem 'cancan'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets

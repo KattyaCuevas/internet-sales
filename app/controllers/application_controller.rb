@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
                :direccion, :telefono, :fecha_nacimiento, :nombre, :apellido)
     end
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, alert: exception.message
+  end
 end

@@ -1,5 +1,7 @@
 <section class="productos">
+  <%= link_to 'Nuevo producto', new_product_path %>
   <h2>Catálogo de productos</h2>
+  <div>
   <% @products.each do |product| %>
     <article class="producto">
       <%= image_tag(product.image_url) %>
@@ -10,5 +12,5 @@
       <%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Está seguro?' } %>
     </article>
   <% end %>
-  <%= link_to 'Nuevo producto', new_product_path %>
+  </div>
 </section>

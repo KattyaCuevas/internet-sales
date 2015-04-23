@@ -1,4 +1,5 @@
 <section class="productos">
+  <%= link_to 'Imprimir', "#{@cart.id}.pdf" %>
   <h2>Mi carrito</h2>
   <% @cart.line_items.each do |item| %>
     <article class="producto">

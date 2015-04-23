@@ -1,6 +1,7 @@
-<section>
+<section class="productos">
 <h2>Regístrarse</h2>
 
+<section class="formulario">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -63,4 +64,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</section>
 </section>
