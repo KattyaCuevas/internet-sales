@@ -12,9 +12,9 @@
   <tbody>
     <% @carts.each do |cart| %>
       <tr>
-        <td><%= link_to 'Show', cart %></td>
-        <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', cart %></td>
+        <td><%= link_to 'Editar', edit_cart_path(cart) %></td>
+        <td><%= link_to 'Eliminar', cart, method: :delete, data: { confirm: 'Está seguro que desea eliminar el producto?' } %></td>
       </tr>
     <% end %>
   </tbody>

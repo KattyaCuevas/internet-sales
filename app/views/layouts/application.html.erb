@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>InternetSales</title>
+  <title>Arvo | Tienda online</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <header>
-  <a href="/"><h1>Logo</h1></a>
-  <p>
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> |
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
-  </p>
+  <a href="/"><img class= "logo" src="/logo.png"></a>
+  <nav>
+    <ul>
+      <% if user_signed_in? %>
+        <li>Hola <strong><%= current_user.nombre%></strong>!</li>
+        <li><%= link_to 'Editar perfil', edit_user_registration_path %></li>
+        <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Regístrarse", new_user_registration_path %></li>
+        <li><%= link_to "Ingresar", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </nav>
 </header>
 <% if notice %>
   <p id="notice"><%= notice %></p>
